@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python detect.py --weights bestcar.pt --conf 0.4 --source ./input.mp4 --save-crop && python detect.py --weights bestlp.pt --conf 0.4 --source ./runs/detect/exp/crops/cars && python recognition.py --modelPath ./finalized_model.sav --dataPath ./runs/detect/exp2/crops/license-plate --savePath ./results
